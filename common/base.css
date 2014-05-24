@@ -1,0 +1,117 @@
+body{
+	width: 1920px;
+	height: 1080px;
+	overflow: hidden;
+    margin: 0px; padding: 0px;
+}
+p,span { 
+	font-family:'丸ゴシック',monospace;
+	line-height:22px;
+}
+
+/*********************** container ***********************/
+
+.container { 
+	background-color:transparent;
+    margin-left:48px;
+    margin-right:48px;
+	width: 1824px;
+	height: 1080px;
+	overflow: hidden;
+}
+.container div.abs{
+	position: absolute;
+}
+.container .layer1{ background-color: rgba(138,199,222,0.5); }
+.container .layer2{ background-color: rgba(242,107,122,0.5); }
+.container .layer3{ background-color: rgba(150,227, 59,0.5); }
+.container .layer4{ background-color: rgba(217,235, 82,0.5); }
+
+.container div div{
+	position: relative;
+}
+.container div p.line {
+    color: rgb(0,0,0);
+	height: 22px;
+	background-color: rgba(255,255,255,0.8);
+	border: 1px solid rgb(64,64,64);
+	margin: 0px; padding: 0px;
+}
+
+
+/*********************** sytaxhighlighter ***********************/
+p.highlight,
+pre.highlight{
+    color: rgb(255,255,255);
+    background-color: rgba(29,32,25,0.8);
+    border: 1px solid rgba(96,96,96,0.8);
+    margin: 0px; padding: 2px;
+}
+.string  { color: rgb(224,224,224); }  /*#c7254e;  244,241,102*/
+.number  { color: rgb(247,  0, 94); }  /*darkorange*/
+.boolean { color: rgb( 83,209,237); }  /*blue*/
+.null    { color: rgb(157, 96,255); }  /*magenta*/
+.key     { color: rgb(150,227,  9); }  /*green*/
+
+
+
+/*********************** button ***********************/
+.btn img{ vertical-align: middle; }
+.btn--active {
+    outline: solid 4px rgb(255,255,255);
+}
+.btn-b,
+.btn-b:hover,
+.btn-b:active,
+.btn-b:focus{
+    background: rgb( 66, 184, 221);
+    color:      rgb(255, 255, 255);
+}
+.btn-r,
+.btn-r:hover,
+.btn-r:active,
+.btn-r:focus{
+    font-weight: bold;
+    background: rgb(202,  60,  60);
+    color:      rgb(255, 255, 255);
+}
+.btn-g,
+.btn-g:hover,
+.btn-g:active,
+.btn-g:focus{
+    font-weight: bold;
+    background: rgb( 28, 184,  65);
+    color:      rgb(255, 255, 255);
+}
+.btn-y,
+.btn-y:hover,
+.btn-y:active,
+.btn-y:focus{
+    font-weight: bold;
+    background: rgb(225, 225,  20);
+    color:      rgb( 64,  64,  64);
+}
+.btn-normal,
+.btn-normal:hover,
+.btn-normal:active,
+.btn-normal:focus{
+    font-weight: bold;
+    background: rgb(192, 192, 192);
+    color:      rgb( 32,  32,  32);
+}
+.btn-submit,
+.btn-submit:hover,
+.btn-submit:active,
+.btn-submit:focus{
+    background-color: rgb(192, 192, 192);
+    color:      rgb( 96,  96,  96);
+    outline: solid 4px rgb(255,255,  0); 
+}
+
+
+
+
+
+
+
+
