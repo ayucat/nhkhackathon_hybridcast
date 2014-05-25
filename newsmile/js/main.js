@@ -1,5 +1,7 @@
 var focus = 0;
 var capLength = 0;
+var currentAnimeList = [];
+var currentAnimeIndex = 0;
 
 function debug(str) {
     var o = JSON.stringify(str);
@@ -56,7 +58,42 @@ $(function() {
 
     function startAnimation(cap_id) {
         var image_url = $("#" + cap_id).attr("src");
+        var re = /(http:\/\/[^/]+\/[^/]+\/[^/]+\/)([^/]+)/;
+        var base = re.exec(image_url)[1];
+        var time = re.exec(image_url)[2];
         
+        var d = new Date(time);
+        currentAnimeList = [];
+        currentAnimeIndex = 0;
+        for (var i = 0; i < 5; i++) {
+            var current = d.getTime() + 1000 * i;
+            current = new Data(current);
+            var yy = dd.getYear();
+            var mm = dd.getMonth() + 1;
+            var dd = dd.getDate();
+            var hh = dd.getHours();
+            var MM = dd.getMinutes();
+            var ss = dd.getSeconds();
+            if (yy < 2000) { yy += 1900; }
+            if (mm < 10) { mm = "0" + mm; }
+            if (dd < 10) { dd = "0" + dd; }
+            if (hh < 10) { hh = "0" + hh; }
+            if (MM < 10) { MM = "0" + MM; }
+            if (ss < 10) { ss = "0" + ss; }
+            
+            var image_name = yy + "-" + mm + "-" + dd + "T" + hh + ":" + MM + ":" + ss;
+            var current_image_url = base + image_name;
+            currentAnimeList.append(current_image_url);
+        }
+
+        var currentIndex = 0;
+        setInterval(function() {
+            $("#" + cap_id).attr("src", currentAnimeList[currentAnimeIndex]);
+            currentAnimeIndex++;
+            if (currentAnimeIndex > 5) {
+                currentAnimeIndex = 0;
+            }
+        });
     }
 
     $("#dialog").dialog();
@@ -64,8 +101,12 @@ $(function() {
     document.addEventListener("keydown", eventKey, false);
     $("div#cap" + focus).addClass("email-item-selected");
 
-    $.get("http://nhkhackathon.cloudapp.net/api/data", function(data){
-        debug(data);
+    $.get("http://nhkhackathon.cloudapp.net/api/data", function(d){
+        var re = /<p>([^<>]+)<\/p>/;
+        var data = re.exec(d["responseText"]);
+        data = JSON.parse(data[1]);
+        console.log(data);
+        /*
         var data = [
             {
                 "emotion": "1",
@@ -123,7 +164,10 @@ $(function() {
                 "image_url": "http://211.129.73.42:21080/s2ia/s1/2014-05-16T21:59:39"
             }
         ];
+        */
         getCapList(data);
+        
+//        startAnimation("cap0_image")
     });
 
     function eventKey(e) {
