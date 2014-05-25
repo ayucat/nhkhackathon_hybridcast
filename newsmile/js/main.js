@@ -29,7 +29,7 @@ $(function() {
             var $face_img = $("<img/>").addClass("email-avatar_icon").attr("src", "img/common/face0" + data[i]["emotion"] + ".png");
             
             var $news_set = $("<div/>").addClass("news_set");
-            var $news_date = $("<h4/>").addClass("news_date").text(jQuery.timeago(data[i]["time"]) + " (国際報道2014)");
+            var $news_date = $("<h4/>").addClass("news_date").text(jQuery.timeago(data[i]["time"]));
 
             var $btn_set = $("<div/>").addClass("btn_set").css("width", "250px");
             var $blue_anchor = $("<a/>").attr("href", "#").html("<img alt=\"\" src=\"img/common/btn_blue.png\">");
@@ -96,8 +96,6 @@ $(function() {
         });
     }
 
-    $("#dialog").dialog();
-    
     document.addEventListener("keydown", eventKey, false);
     $("div#cap" + focus).addClass("email-item-selected");
 
