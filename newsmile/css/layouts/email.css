@@ -136,7 +136,9 @@ a {
     padding: 0.9em 1em;
     border-bottom: 1px solid #ddd;
     border-left: 6px solid transparent;
-	height: 250px;
+	height: 200px;
+	background: #fff;
+	font-size: 22px;
 }
     .email-avatar {
         border-radius: 3px;
@@ -233,7 +235,7 @@ a {
     }
 
     #list {
-        margin-left: -350px;
+        margin-left: -500px;
         width: 100%;
         height: 33%;
         border-bottom: 1px solid #ddd;
@@ -260,7 +262,7 @@ a {
 
     /* This will take up the entire height, and be a little thinner */
     #list {
-        margin-left: -350px;
+        margin-left: -500px;
         width: 10%;
         height: 100%;
         border-right: 1px solid #ddd;
@@ -278,7 +280,6 @@ a {
 .email-avatar_icon {
   width:100%;
   height:100%;
-
 
 }
 .email-avatar {
@@ -321,7 +322,7 @@ a {
     }
 
     #list {
-        margin-left: -350px;
+        margin-left: -500px;
         width: 100%;
         height: 33%;
         border-bottom: 1px solid #ddd;
@@ -348,7 +349,7 @@ a {
 
     /* This will take up the entire height, and be a little thinner */
     #list {
-        margin-left: -350px;
+        margin-left: -500px;
         width:20%;
         height: 100%;
         border-right: 1px solid #ddd;
@@ -400,9 +401,6 @@ a {
 	height:60px;
 	float:left;
 	margin-right:0px;
-		 filter:alpha(opacity=50);
-    -moz-opacity: 0.5;
-    opacity: 0.5;
 }
 
 p.news_age{
@@ -421,16 +419,6 @@ div.btn_set {
 }
 
 
-.email-avatar_icon {
-	 filter:alpha(opacity=60);
-    -moz-opacity: 0.6;
-    opacity: 0.6;
-}
-.email-avatar {
-	 filter:alpha(opacity=60);
-    -moz-opacity: 0.6;
-    opacity: 0.6;
-}
 .email-item-selected {
 	/*background:#FBE2ED;	
 	border:solid 6px #FBE2ED;*/
@@ -444,17 +432,3 @@ div.btn_set {
    
 }
 
-.email-item-selected .news_set {
-
-	 filter:alpha(opacity=100);
-    -moz-opacity: 1;
-    opacity: 1;
-
-}
-/*
-.pure-u {
-	background:#eee;
-	
-	
-	
-}*/
