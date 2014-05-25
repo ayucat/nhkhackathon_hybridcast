@@ -27,7 +27,7 @@ $(function() {
             var $face_img = $("<img/>").addClass("email-avatar_icon").attr("src", "img/common/face0" + data[i]["emotion"] + ".png");
             
             var $news_set = $("<div/>").addClass("news_set");
-            var $news_date = $("<h4/>").addClass("news_date").text(data[i]["date"] + "国際報道2014");
+            var $news_date = $("<h4/>").addClass("news_date").text(jQuery.timeago(data[i]["time"]) + " (国際報道2014)");
 
             var $btn_set = $("<div/>").addClass("btn_set").css("width", "250px");
             var $blue_anchor = $("<a/>").attr("href", "#").html("<img alt=\"\" src=\"img/common/btn_blue.png\">");
@@ -75,6 +75,7 @@ $(function() {
                     "3x": "30%"
                 },
                 "date": "2014-05-25",
+                "time": "2014-05-25 15:05:58",
                 "desc": "This is text subject 1",
                 "image_url": "http://211.129.73.42:21080/s2ia/s1/2014-05-16T22:00:02"
             },
@@ -86,6 +87,7 @@ $(function() {
                     "3x": "30%"
                 },
                 "date": "2014-05-25",
+                "time": "2014-05-25 16:10:58",
                 "desc": "This is text subject 2",
                 "image_url": "http://211.129.73.42:21080/s2ia/s1/2014-05-16T21:00:01"
             },
@@ -97,6 +99,7 @@ $(function() {
                     "3x": "30%"
                 },
                 "date": "2014-05-25",
+                "time": "2014-05-25 16:08:58",
                 "desc": "This is text subject 1",
                 "image_url": "http://211.129.73.42:21080/s2ia/s1/2014-05-16T21:59:50"
             },
@@ -108,6 +111,7 @@ $(function() {
                     "3x": "30%"
                 },
                 "date": "2014-05-25",
+                "time": "2014-05-25 16:04:58",
                 "desc": "This is text subject 1",
                 "image_url": "http://211.129.73.42:21080/s2ia/s1/2014-05-16T21:59:58"
             },
